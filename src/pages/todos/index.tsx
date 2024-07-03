@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "@/styles/Todos.module.css";
 import axios from "axios";
 import Link from "next/link";
+import api from "@/services/api";
 
 interface todos {
   userId: number;
@@ -16,7 +17,7 @@ export default function Todos() {
 
   useEffect(() => {
     const getTodos = async () => {
-      const res = await axios.get("https://jsonplaceholder.typicode.com/todos");
+      const res = await api.get("https://jsonplaceholder.typicode.com/todos");
       setTodos(res.data);
     };
     getTodos();
