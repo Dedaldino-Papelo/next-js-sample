@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #111;
+    display: flex;
+    padding: 20px 10px ;
+}
+
+.navbar a {
+    color: #FFF;
+    margin-right: 1em;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #999
+}
